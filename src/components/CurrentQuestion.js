@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-export const CurrentQuestion = () => {
+export const CurrentQuestion = ({ userAnswer, setUserAnswer }) => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
 
   if (!question) {
@@ -12,10 +12,16 @@ export const CurrentQuestion = () => {
     <div>
 
       <h1>Question: {question.questionText}</h1>
-      {question.options.map(answer => {
+      {question.options.map((answer, answerIndex) => {
         return (
           <>
-            <input type="radio" id={answer} />
+            <input
+              type="radio"
+              id={answer}
+              name="answer"
+              onChange={(event) => setUserAnswer(event.target.value)}
+              value={answerIndex}
+            />
             <label for={answer}>{answer}</label>
           </>
 
