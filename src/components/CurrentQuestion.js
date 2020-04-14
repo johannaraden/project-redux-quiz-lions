@@ -10,7 +10,18 @@ export const CurrentQuestion = () => {
 
   return (
     <div>
+
       <h1>Question: {question.questionText}</h1>
+      {question.options.map(answer => {
+        return (
+          <>
+            <input type="radio" id={answer} />
+            <label for={answer}>{answer}</label>
+          </>
+
+
+        )
+      })}
     </div>
   )
 }
