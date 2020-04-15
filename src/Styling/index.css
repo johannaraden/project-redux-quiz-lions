@@ -5,14 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lemonchiffon;
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: auto;
   padding: 3em;
   align-items: center;
-  border: 2px solid black;
+  background-color: lemonchiffon;
 }
 
 code {

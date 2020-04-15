@@ -5,7 +5,7 @@ import '../Styling/buttons.css'
 
 export const StartPage = () => {
     return (
-        <div>
+        <div className="start-container">
             <h1>Welcome to the quiz!</h1>
             <Link className="button" to="/quiz">Click</Link>
         </div>

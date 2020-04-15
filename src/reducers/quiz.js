@@ -15,7 +15,8 @@ const initialState = {
   questions,
   answers: [],
   currentQuesionIndex: 0,
-  quizOver: false
+  quizOver: false,
+  startTime: null
 }
 
 export const quiz = createSlice({
