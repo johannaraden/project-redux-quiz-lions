@@ -2,8 +2,13 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
+  { id: 1, questionText: 'In the film "Godfather", who was being referenced when the Corleone family received the Sicilian message of “sleeping with the fishes”?', options: ['Carlo Rizzi', 'Tom Hagen', 'Virgil "The Turk" Sollozzo', 'Luca Brasi'], correctAnswerIndex: 3 },
+  { id: 2, questionText: 'Which is the hottest planet?', options: ['Venus', 'Mercury', 'Saturn', 'Jupiter'], correctAnswerIndex: 0 },
+  { id: 3, questionText: 'How far can you hear a lion roar?', options: ['1 mile', '10 miles', '5 miles', '3 miles'], correctAnswerIndex: 2 },
+  { id: 4, questionText: 'What is the world´s largest jellyfish?', options: ['Lion´s Mane', 'Box Jellyfish', 'Moon Jelly', 'Bluebottle'], correctAnswerIndex: 0 },
+  { id: 5, questionText: 'From which Shakespeare play comes this line "All the world´s a stage and all the men and women merely players"?', options: ['Hamlet', 'As You like it', 'Othello', 'Romeo & Juliett'], correctAnswerIndex: 1 },
+  { id: 6, questionText: 'How fast can lions run?', options: ['80 km/h', '70 km/h', '90 km/h', '50 km/h'], correctAnswerIndex: 0 },
+  { id: 7, questionText: 'What is the official language in Serbia?', options: ['Russian', 'Albanian', 'Serbian', 'Kurdo'], correctAnswerIndex: 1 },
 ]
 
 const initialState = {
