@@ -5,8 +5,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { quiz } from 'reducers/quiz'
 import { StartPage } from './pages/Start'
 import { Question } from './pages/Question'
-
-import { CurrentQuestion } from 'components/CurrentQuestion'
+import { Summary } from './pages/Summary'
 
 const reducer = combineReducers({
   quiz: quiz.reducer
@@ -26,7 +25,7 @@ export const App = () => {
             <Question />
           </Route>
           <Route path="/summary" exact>
-            {/* <Summary /> */}
+            <Summary />
           </Route>
         </Switch>
       </BrowserRouter>
