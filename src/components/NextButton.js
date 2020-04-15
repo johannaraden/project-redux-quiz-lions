@@ -4,6 +4,7 @@ import { quiz } from '../reducers/quiz'
 
 
 
+
 export const NextButton = ({setAnswered}) => {
 
     const dispatch = useDispatch()

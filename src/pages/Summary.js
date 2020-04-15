@@ -2,7 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz'
-import { useHistory } from "react-router-dom"
+import { useHistory } from 'react-router-dom'
+import '../Styling/buttons.css'
 
 
 
@@ -25,7 +26,7 @@ export const Summary = ({setAnswered}) => {
   return (
     <div>
       <h1>You answered {rightAnswers.length} right out of {answers.length} questions!</h1>
-      <button onClick={handleRestart} >Again!!!</button>
+      <button className="button" onClick={handleRestart} >Again!!!</button>
     </div>
   )
 }

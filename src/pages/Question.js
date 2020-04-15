@@ -22,7 +22,7 @@ export const Question = () => {
             {answered && question.id !== questions.length &&
                 <NextButton setAnswered= {setAnswered}/>}
             {answered && question.id === questions.length &&
-                <Link setAnswered={setAnswered} to ='/summary' >Result</Link>}
+                <Link className="button" setAnswered={setAnswered} to ='/summary' >Result</Link>}
                 <Progress/>
         </section>
     )
