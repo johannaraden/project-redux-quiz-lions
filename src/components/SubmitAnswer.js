@@ -11,6 +11,6 @@ export const SubmitAnswer = ({ setAnswered, userAnswer, setUserAnswer }) => {
     setAnswered(true)
   }
   return (
-    <button onClick={handleSubmit}>Submit</button>
+    <button className="button" onClick={handleSubmit}>Submit</button>
   )
 }

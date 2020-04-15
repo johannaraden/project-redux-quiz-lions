@@ -5,6 +5,7 @@ import { SubmitAnswer } from '../components/SubmitAnswer'
 import { Progress } from '../components/Progress'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import '../Styling/question.css'
 
 export const Question = () => {
     const [answered, setAnswered] = useState(false)
@@ -13,7 +14,7 @@ export const Question = () => {
     const questions = useSelector((state) => state.quiz.questions)
 
     return (
-        <>
+        <section className="question-container">
             <CurrentQuestion userAnswer={userAnswer} setUserAnswer={setUserAnswer} answered={answered} />
             {!answered &&
                 <SubmitAnswer userAnswer={userAnswer} setUserAnswer={setUserAnswer}
@@ -23,6 +24,6 @@ export const Question = () => {
             {answered && question.id === questions.length &&
                 <Link setAnswered={setAnswered} to ='/summary' >Result</Link>}
                 <Progress/>
-        </>
+        </section>
     )
 }

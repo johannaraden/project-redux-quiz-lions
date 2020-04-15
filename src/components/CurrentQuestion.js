@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import '../Styling/currentquestion.css'
 
 export const CurrentQuestion = ({ userAnswer, setUserAnswer, answered }) => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
@@ -15,7 +16,7 @@ export const CurrentQuestion = ({ userAnswer, setUserAnswer, answered }) => {
       <h1>Question: {question.questionText}</h1>
       {question.options.map((answer, answerIndex) => {
         return (
-          <>
+          <section className="answers">
             <input
               type="radio"
               id={answer}
@@ -24,7 +25,7 @@ export const CurrentQuestion = ({ userAnswer, setUserAnswer, answered }) => {
               value={answerIndex}
             />
             <label style={{color: answered && answerIndex === question.correctAnswerIndex ? "green" : answered ? "red" : "black" }} for={answer}>{answer}</label>
-          </>
+          </section>
 
 
         )
