@@ -24,7 +24,7 @@ export const CurrentQuestion = ({ userAnswer, setUserAnswer, answered }) => {
               onChange={(event) => setUserAnswer(parseInt(event.target.value))}
               value={answerIndex}
             />
-            <label style={{color: answered && answerIndex === question.correctAnswerIndex ? "green" : answered ? "red" : "black" }} for={answer}>{answer}</label>
+            <label style={{ color: answered && answerIndex === question.correctAnswerIndex ? "green" : answered && answerIndex !== question.correctAnswerIndex && answerIndex == userAnswer ? "red" : "black" }} for={answer}>{answer}</label>
           </section>
 
 

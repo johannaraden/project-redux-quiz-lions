@@ -2,15 +2,12 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz'
-import { useHistory } from 'react-router-dom'
+import { useHistory, withRouter } from 'react-router-dom'
 import '../Styling/buttons.css'
 
-
-
-export const Summary = ({setAnswered}) => {
+export const Summary = withRouter({ history, ...props }) => {
   const answers = useSelector((state) => state.quiz.answers)
   const rightAnswers = answers.filter(item => item.isCorrect)
-  const history = useHistory()
 
   const dispatch = useDispatch()
 

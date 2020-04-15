@@ -6,6 +6,8 @@ import { Progress } from '../components/Progress'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import '../Styling/question.css'
+import Countdown from 'react-countdown';
+
 
 export const Question = () => {
     const [answered, setAnswered] = useState(false)
@@ -15,15 +17,16 @@ export const Question = () => {
 
     return (
         <section className="question-container">
+
             <CurrentQuestion userAnswer={userAnswer} setUserAnswer={setUserAnswer} answered={answered} />
             {!answered &&
                 <SubmitAnswer userAnswer={userAnswer} setUserAnswer={setUserAnswer}
                     setAnswered={setAnswered} />}
             {answered && question.id !== questions.length &&
-                <NextButton setAnswered= {setAnswered}/>}
+                <NextButton setAnswered={setAnswered} />}
             {answered && question.id === questions.length &&
-                <Link className="button" setAnswered={setAnswered} to ='/summary' >Result</Link>}
-                <Progress/>
+                <Link className="button" setAnswered={setAnswered} to='/summary' >Result</Link>}
+            <Progress />
         </section>
     )
 }
