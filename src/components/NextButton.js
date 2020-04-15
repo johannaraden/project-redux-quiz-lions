@@ -4,7 +4,7 @@ import { quiz } from '../reducers/quiz'
 
 
 
-export const NextButton = () => {
+export const NextButton = ({setAnswered}) => {
 
     const dispatch = useDispatch()
 
@@ -12,6 +12,7 @@ export const NextButton = () => {
         dispatch (
         quiz.actions.goToNextQuestion()
         )
+        setAnswered(false)
     }
 
     return ( 
