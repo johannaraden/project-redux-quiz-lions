@@ -2,19 +2,19 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'In the film "Godfather", who was being referenced when the Corleone family received the Sicilian message of “sleeping with the fishes”?', options: ['Carlo Rizzi', 'Tom Hagen', 'Virgil "The Turk" Sollozzo', 'Luca Brasi'], correctAnswerIndex: 3 },
-  { id: 2, questionText: 'Which is the hottest planet?', options: ['Venus', 'Mercury', 'Saturn', 'Jupiter'], correctAnswerIndex: 0 },
-  { id: 3, questionText: 'How far can you hear a lion roar?', options: ['1 mile', '10 miles', '5 miles', '3 miles'], correctAnswerIndex: 2 },
-  { id: 4, questionText: 'What is the world´s largest jellyfish?', options: ['Lion´s Mane', 'Box Jellyfish', 'Moon Jelly', 'Bluebottle'], correctAnswerIndex: 0 },
-  { id: 5, questionText: 'From which Shakespeare play comes this line "All the world´s a stage and all the men and women merely players"?', options: ['Hamlet', 'As You like it', 'Othello', 'Romeo & Juliett'], correctAnswerIndex: 1 },
-  { id: 6, questionText: 'How fast can lions run?', options: ['80 km/h', '70 km/h', '90 km/h', '50 km/h'], correctAnswerIndex: 0 },
-  { id: 7, questionText: 'What is the official language in Serbia?', options: ['Russian', 'Albanian', 'Serbian', 'Kurdo'], correctAnswerIndex: 1 },
+  { id: 1, questionText: 'en polis', options: ['polisar', 'polisor', 'polis', 'poliser'], correctAnswerIndex: 3 },
+  { id: 2, questionText: 'en potatis', options: ['potatisar', 'potatisor', 'potatis', 'potatiser'], correctAnswerIndex: 0 },
+  { id: 3, questionText: 'ett tåg', options: ['tågor', 'tåge', 'tåg', 'tåger'], correctAnswerIndex: 2 },
+  { id: 4, questionText: 'en kvinna', options: ['kvinnor', 'kvinner', 'kvinnar', 'kvinna'], correctAnswerIndex: 0 },
+  { id: 5, questionText: 'en lärare', options: ['lärarer', 'lärare', 'lärarna', 'läror'], correctAnswerIndex: 1 },
+  { id: 6, questionText: 'ett hjärta', options: ['hjärtan', 'hjärtor', 'hjärta', 'hjärter'], correctAnswerIndex: 0 },
+  { id: 7, questionText: 'ett fan', options: ['faner', 'fan', 'fans', 'fanner'], correctAnswerIndex: 2 },
 ]
 
 const initialState = {
   questions,
   answers: [],
-  currentQuesionIndex: 0,
+  currentQuestionIndex: 0,
   quizOver: false,
   startTime: null
 }
@@ -68,10 +68,10 @@ export const quiz = createSlice({
      * This action does not require a payload.
      */
     goToNextQuestion: (state) => {
-      if (state.currentQuesionIndex + 1 === state.questions.length) {
+      if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.quizOver = true
       } else {
-        state.currentQuesionIndex += 1
+        state.currentQuestionIndex += 1
       }
     },
 

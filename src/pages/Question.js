@@ -12,13 +12,13 @@ import Countdown from 'react-countdown';
 export const Question = () => {
     const [answered, setAnswered] = useState(false)
     const [userAnswer, setUserAnswer] = useState(null)
-    const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
+    const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
     const questions = useSelector((state) => state.quiz.questions)
     const history = useHistory()
     const [startTime, setStartTime] = useState(Date.now())
 
     return (
-        <section className="question-container">
+        <section className='question-container'>
             <Countdown
                 style={{ fontSize: 20 }}
                 date={startTime + 60000}
@@ -32,7 +32,7 @@ export const Question = () => {
             {answered && question.id !== questions.length &&
                 <NextButton setAnswered={setAnswered} />}
             {answered && question.id === questions.length &&
-                <Link className="button" setAnswered={setAnswered} to='/summary' >Result</Link>}
+                <Link className='button' setAnswered={setAnswered} to='/summary' >Result</Link>}
             <Progress />
         </section>
     )

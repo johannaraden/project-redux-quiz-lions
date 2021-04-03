@@ -1,6 +1,7 @@
-import React  from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz'
+import '../Styling/buttons.css'
 
 
 
@@ -10,13 +11,13 @@ export const NextButton = ({setAnswered}) => {
     const dispatch = useDispatch()
 
     const handleClick = () => {
-        dispatch (
+      dispatch (
         quiz.actions.goToNextQuestion()
-        )
-        setAnswered(false)
+      )
+      setAnswered(false)
     }
 
     return ( 
-    <button className="button" onClick={handleClick}>Next!</button>
+    	<button className='button' onClick={handleClick}>Next!</button>
     )
 }

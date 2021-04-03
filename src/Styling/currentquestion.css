@@ -1,14 +1,55 @@
+.question {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.question-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.question-box > * {
+  justify-content: center;
+}
+
+label {
+  width: 10em;
+  height: 5em;
+  line-height: 5em;
+  cursor: pointer;
+  margin-top: .5em;
+}
+
+label:hover {
+  font-weight: bold;
+}
+
+[name='answer'] {
+  display: none;
+}
+
 .answers {
     display: flex;
     margin: auto;
     align-items: center;
-    padding: .5em;
     cursor: pointer;
-    font-size: 20px;
+    font-size: .8em;
+    color: #064F50;
+    text-align: center;
+    flex: 50;
 }
 
-.answers:hover {
-   font-weight: bold;
+input:checked + label {
+  font-weight: bold;
 }
 
-
+@media screen and (min-width: 768px) {
+    .question {
+      font-size: 1.6em;
+    }
+    .answers {
+      font-size: 1.2em;
+    }
+  }

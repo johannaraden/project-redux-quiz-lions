@@ -2,4 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    border: 2em solid white;
+    color: #064F50;
+    padding: 6em;
 }
+
+.green {
+    color: #4eba60;
+}
+
+.red {
+    color: #ba534e;
+}
+
+.black {
+    color: white;
+}
+
+
+@media screen and (min-width: 768px) {
+    .question-container {
+      width: 60%;
+    }
+  }

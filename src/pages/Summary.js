@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz'
 import '../Styling/buttons.css'
+import '../Styling/summary.css'
 
 export const Summary = () => {
   const answers = useSelector((state) => state.quiz.answers)
@@ -20,9 +21,9 @@ export const Summary = () => {
 
 
   return (
-    <div>
+    <div className='summary-page'>
       <h1>You answered {rightAnswers.length} right out of {answers.length} questions!</h1>
-      <button className="button" onClick={handleRestart} >Again!!!</button>
+      <button className='button' onClick={handleRestart} >Again!!!</button>
     </div>
   )
 }

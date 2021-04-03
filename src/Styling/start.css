@@ -1,3 +1,71 @@
+.frame {
+  border: 2em solid white;
+}
+
 .start-container {
-  background-color: lemonchiffon;
+  padding: 6em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #064F50;
+}
+
+.start-headline {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 2em;
+}
+
+.button {
+  text-align: center;
+  width: 50%;
+  font-size: 1em;
+}
+
+.frame{
+  animation:blinkingBorder 2s infinite;
+}
+@keyframes blinkingBorder{
+  0%{     border: 2em solid white; }
+  49%{    border: 2em solid white; }
+  60%{    border: 2em solid #064F50; }
+  99%{    border: 2em solid #064F50; }
+  100%{   border: 2em solid white; }
+}
+
+
+.start-container{
+  animation:blinkingBackground 2s infinite;
+}
+@keyframes blinkingBackground{
+  0%{     background-color: #064F50; }
+  49%{    background-color: #064F50; }
+  60%{    background-color: white; }
+  99%{    background-color: white; }
+  100%{   background-color: #064F50; }
+}
+
+.start-headline{
+  animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: white;    }
+  49%{    color: white;    }
+  60%{    color: #064F50;    }
+  99%{    color: #064F50;    } 
+  100%{   color: white;    }
+}
+
+@media screen and (min-width: 768px) {
+  .start-container {
+    padding: 8em;
+  }
+  .button {
+    font-size: 1.2em;
+  }
+  .start-headline {
+    font-size: 1.8em;
+  }
 }

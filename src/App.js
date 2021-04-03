@@ -21,18 +21,17 @@ export const App = () => {
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact>
+          <Route path='/' exact>
             <StartPage />
           </Route>
-          <Route path="/quiz" exact>
+          <Route path='/quiz' exact>
             <Question />
           </Route>
-          <Route path="/summary" exact>
+          <Route path='/summary' exact>
             <Summary />
           </Route>
         </Switch>
       </BrowserRouter>
     </Provider>
-
   )
 }
